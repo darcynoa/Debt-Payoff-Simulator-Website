@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "flask-dev": "flask --app api/index run",
+    "flask-dev": "flask --app api/index --debug run",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
