@@ -25,8 +25,25 @@ example_data = {
 
 app = Flask(__name__)
 
-@app.route('/api/data', methods=['POST', 'GET'])
-def hello_data():
+@app.route('/api/snowball', methods=['POST', 'GET'])
+def snowball():
+    if request.method == 'POST':
+        print('Test input:', request.form['debt_method'])
+    simulator = DebtSimulator(example_data['sample-debt-outgoings'], example_data['sample-non-debt-outgoings'], example_data['sample-income'])
+    # Run the simulation
+    schedule, payment_details = simulator.run_simulation('snowball')
+
+    # Generate the summary
+    summary = simulator.generate_summary(schedule, 'snowball')
+
+    return jsonify({
+        'schedule': schedule,
+        'payment_details': payment_details.to_dict(orient='records'),
+        'summary': summary
+    })
+
+@app.route('/api/avalanche', methods=['POST', 'GET'])
+def avalanche():
     if request.method == 'POST':
         print('Test input:', request.form['debt_method'])
     simulator = DebtSimulator(example_data['sample-debt-outgoings'], example_data['sample-non-debt-outgoings'], example_data['sample-income'])
