@@ -1,7 +1,5 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request # type: ignore
 from debt_simulator import DebtSimulator
-
-# Can we have initial loading call the API but further updates use Server Actions?
 
 example_data = {
             'sample-debt-outgoings': [
