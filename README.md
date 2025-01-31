@@ -1,8 +1,6 @@
 <!-- @format -->
 
-You're correct that setting up a virtual environment is a good practice, especially when working with Python and Flask. It helps isolate dependencies and makes it easier to manage different projects. Here’s a more detailed, step-by-step guide on how to run the app locally.
-
-# Your go-to Debt Payment Strategy!
+# Your Go-To Debt Payment Strategy
 
 ## 🚀 Overview
 
@@ -45,6 +43,10 @@ git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 ```
 
+#### 1.5 **Download python**
+
+If you didn't already, download Python from this link [here](https://www.python.org/downloads/)!
+
 ### 2. **Set Up Python Virtual Environment (for Flask Backend):**
 
 It’s recommended to set up a virtual environment to manage your Python dependencies. Here’s how to do it:
@@ -79,7 +81,7 @@ It’s recommended to set up a virtual environment to manage your Python depende
 
 ### 3. **Install Node.js Dependencies (for Next.js Frontend):**
 
-In a separate terminal, navigate to the project directory if you haven’t already, and run:
+In a **separate terminal**, navigate to the project directory if you haven’t already, and run:
 
 ```bash
 npm install
