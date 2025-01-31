@@ -38,3 +38,6 @@ next-env.d.ts
 # flask
 .venv
 __pycache__
+
+#custom
+TODO.md
